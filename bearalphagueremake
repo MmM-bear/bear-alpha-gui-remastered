@@ -145,7 +145,7 @@ local Tab = Window:CreateTab("основное", "menu")
  local Button = Tab:CreateButton({
     Name = "Анти-афк",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/Anti_afk/refs/heads/main/%D0%B0%D0%BD%D1%82%D0%B8%D0%B0%D1%84%D0%BA?token=GHSAT0AAAAAADT5P53XRW2UPBCKPG72D6FK2LUSZAA"))()
+        loadstring(game:https://raw.githubusercontent.com/MmM-bear/Anti_afk/refs/heads/main/%D0%B0%D0%BD%D1%82%D0%B8%D0%B0%D1%84%D0%BA"))()
         print("Bear [Alpha] GUI: анти-афк успешно запущен!")
     end,
  })
@@ -153,7 +153,7 @@ local Tab = Window:CreateTab("основное", "menu")
  local Button = Tab:CreateButton({
     Name = "Телепортирование к игроку гуи",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/Teleport-player/refs/heads/main/teleport%20to%20player999?token=GHSAT0AAAAAADT5P53XQ4VB732PQQ3JIKGQ2LUSVCA"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/Teleport-player/refs/heads/main/teleport%20to%20player999"))()
         print("Bear [Alpha] GUI: телепортирование успешно запущено✔")
     end,
  })
