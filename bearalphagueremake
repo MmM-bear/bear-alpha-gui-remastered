@@ -1,0 +1,1602 @@
+workspace.Camera.FieldOfView = 100
+-- For Music
+local sound = game.Workspace:FindFirstChild("Music")
+
+if sound then
+    -- Function to check if a sound effect already exists
+    local function findEffect(className)
+        for _, effect in ipairs(sound:GetChildren()) do
+            if effect:IsA(className) then
+                return effect
+            end
+        end
+        return nil
+    end
+
+    -- Add DistortionSoundEffect if not present
+    local distort = findEffect("DistortionSoundEffect")
+    if not distort then
+        distort = Instance.new("DistortionSoundEffect")
+        distort.Parent = sound
+        distort.Enabled = true
+        distort.Level = 0
+    end
+
+    -- Add EqualizerSoundEffect if not present
+    local eq = findEffect("EqualizerSoundEffect")
+    if not eq then
+        eq = Instance.new("EqualizerSoundEffect")
+        eq.Parent = sound
+        eq.Enabled = true
+        eq.HighGain = 0
+        eq.LowGain = 0
+        eq.MidGain = 0
+    end
+
+    -- Add PitchShiftSoundEffect if not present
+    local pitchShift = findEffect("PitchShiftSoundEffect")
+    if not pitchShift then
+        pitchShift = Instance.new("PitchShiftSoundEffect")
+        pitchShift.Parent = sound
+        pitchShift.Enabled = true
+        pitchShift.Octave = 1
+        pitchShift.Priority = 0
+    end
+
+    -- Add ReverbSoundEffect if not present
+    local reverbEffect = findEffect("ReverbSoundEffect")
+    if not reverbEffect then
+        reverbEffect = Instance.new("ReverbSoundEffect")
+        reverbEffect.Parent = sound
+        reverbEffect.Enabled = false
+        reverbEffect.DecayTime = 0.1
+        reverbEffect.Density = 0
+        reverbEffect.DryLevel = 0
+        reverbEffect.WetLevel = 0
+    end
+end
+
+
+
+-- Check if the sound instance exists
+    if not sound then
+     warn("No sound instance named 'Music' found in Workspace!")
+     return
+    end
+
+Lighting = game:GetService("Lighting")
+-- 100000
+
+
+-- Bear anniversary lobby theme ost id: rbxassetid://13508905498
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+
+local Window = Rayfield:CreateWindow({
+    Name = "REмейк беар альфа гуи | 01vojta | ремейк by MmM",
+    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+    LoadingTitle = "идет загрузка...",
+    LoadingSubtitle = "автор 01vojta",
+    Theme = "Amethyst", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+ 
+    DisableRayfieldPrompts = false,
+    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+ 
+    ConfigurationSaving = {
+       Enabled = true,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "ConfigOne"
+    },
+ 
+    Discord = {
+       Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+ 
+    KeySystem = false, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Untitled",
+       Subtitle = "Key System",
+       Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+ 
+ Rayfield:Notify({
+    Title = "Yessir!!!",
+    Content = "скрипт успешно загружен!",
+    Duration = 3,
+    Image = "check",
+ })
+
+local Tab = Window:CreateTab("основное", "menu")
+
+ local Section = Tab:CreateSection("скрипты")
+
+ local Button = Tab:CreateButton({
+    Name = "админка Yield",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+        print("Bear [Alpha] GUI: админка йолд загружена✔")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Инвизибл",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/3Rnd9rHf"))()
+        print("Bear [Alpha] GUI: инвизибл запущен!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Фарма квидз",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/bear-alpha-russian-farm-quidz/refs/heads/main/bear-alpha-dex"))()
+        print("Bear [Alpha] GUI: Фарма квидз запущена✔ (перед тем как запустишь авто-фарм, не забудь включить анти-афк!!!)")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Анти-афк",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/Anti_afk/refs/heads/main/%D0%B0%D0%BD%D1%82%D0%B8%D0%B0%D1%84%D0%BA?token=GHSAT0AAAAAADT5P53X572JPRAAGFBE5IDG2LUAZYQ"))()
+        print("Bear [Alpha] GUI: анти-афк успешно запущен!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Телепортирование к игроку гуи",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/Teleport-player/refs/heads/main/teleport%20to%20player999?token=GHSAT0AAAAAADT5P53WCI55HIN4OISGUVE42LUAD4Q"))()
+        print("Bear [Alpha] GUI: телепортирование успешно запущено✔")
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+
+ local Section = Tab:CreateSection("освещение карт")
+
+ local Button = Tab:CreateButton({
+    Name = "освещение всей карты",
+    Callback = function()
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 100000
+        Lighting.GlobalShadows = false
+        Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+        print("Bear [Alpha] GUI: освещение всей карты запущено✔")
+    end,
+ })
+
+
+ local Button = Tab:CreateButton({
+    Name = "вернуть нормальное освещение карты",
+    Callback = function()
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 0
+        Lighting.GlobalShadows = true
+        Lighting.FogEnd = 120
+        Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+        print("Bear [Alpha] GUI: Fullbright Reverted✔")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "освещение спектателя",
+    Callback = function()
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 0
+        Lighting.FogEnd = 100000
+        Lighting.GlobalShadows = false
+        Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+        print("Bear [Alpha] GUI: освещение спектателя запущено✔")
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+ local Section = Tab:CreateSection("ЕСП")
+
+ local Button = Tab:CreateButton({
+    Name = "ЕСП",
+    Callback = function()
+-- ESP Script start
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+
+local function removeHighlightFromCharacter(character)
+    local existingHighlight = character:FindFirstChildOfClass("Highlight")
+    if existingHighlight then
+        existingHighlight:Destroy()
+    end
+end
+
+local function addHighlightToCharacter(character)
+    local player = Players:GetPlayerFromCharacter(character)
+    if player then
+        if player.Team and player.Team.Name == "Bear" then
+            local torso = character:FindFirstChild("Torso")
+            if torso then
+                removeHighlightFromCharacter(torso)
+                local highlight = Instance.new("Highlight")
+                highlight.FillColor = Color3.fromRGB(255, 0, 0) -- Red for Bear team
+                highlight.Parent = torso
+                highlight.Name = "BearHighlight"
+                torso.Transparency = 0 -- Set torso transparency to 0
+            else
+                removeHighlightFromCharacter(character)
+                local highlight = Instance.new("Highlight")
+                highlight.FillColor = Color3.fromRGB(255, 0, 0) -- Red for Bear team
+                highlight.Parent = character
+                highlight.Name = "BearHighlight"
+            end
+        else
+            removeHighlightFromCharacter(character)
+            local highlight = Instance.new("Highlight")
+            highlight.FillColor = Color3.fromRGB(14, 100, 255) -- Blue for others
+            highlight.Parent = character
+        end
+    end
+end
+
+local function addHighlightToAllPlayers()
+    local players = Players:GetPlayers()
+    for i, player in players do
+        local character = player.Character
+        if character then
+            addHighlightToCharacter(character)
+        end
+    end
+end
+
+-- Add highlight to all existing player characters
+addHighlightToAllPlayers()
+
+-- Listen for new player characters being added
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(addHighlightToCharacter)
+end)
+
+-- Update highlights every 5 seconds
+while true do
+    task.wait(5)
+    addHighlightToAllPlayers()
+end
+
+
+-- End To the esp script
+
+        Rayfield:Notify({
+            Title = "Bear (alpha) GUI",
+            Content = "ЕСП активирован!",
+            Duration = 6.5,
+            Image = "rewind",
+         })
+        print("Bear [Alpha] GUI: ЕСП активирован!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "ЕСП имя игроков",
+    Callback = function()
+--Name Esp Start
+local Players = game:GetService("Players")
+local Teams = game:GetService("Teams")
+
+local function createBillboardGui(character)
+    local head = character:FindFirstChild("Head")
+    if head then
+        -- Remove existing BillboardGui if it exists
+        local existingGui = head:FindFirstChild("BearESP")
+        if existingGui then
+            existingGui:Destroy()
+        end
+
+        local billboardGui = Instance.new("BillboardGui")
+        billboardGui.Name = "BearESP"
+        billboardGui.AlwaysOnTop = true
+        billboardGui.MaxDistance = 9999999999999
+        billboardGui.Size = UDim2.new(0, 200, 0, 50)
+        billboardGui.Adornee = head
+        billboardGui.Parent = head
+
+        local textLabel = Instance.new("TextLabel")
+        textLabel.Size = UDim2.new(1, 0, 1, 0)
+        textLabel.BackgroundTransparency = 1
+        textLabel.Text = character.Name -- Set the text to the character's name
+        textLabel.Parent = billboardGui
+
+        local player = Players:GetPlayerFromCharacter(character)
+        if player then
+            if player.Team == Teams:FindFirstChild("Bear") then
+                textLabel.TextColor3 = Color3.new(255, 0, 0) -- Red color
+            else
+                textLabel.TextColor3 = Color3.new(255, 255, 255) -- White color
+            end
+        end
+    end
+end
+
+local function addBillboardGuiToAllPlayers()
+    local players = Players:GetPlayers()
+    for i, player in players do
+        local character = player.Character
+        if character then
+            createBillboardGui(character)
+        end
+    end
+end
+
+-- Add BillboardGui to all existing player characters
+addBillboardGuiToAllPlayers()
+
+-- Listen for new player characters being added
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(createBillboardGui)
+end)
+
+-- Update BillboardGui every 5 seconds
+while true do
+    task.wait(5)
+    addBillboardGuiToAllPlayers()
+end
+--Name ESP End
+
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "ЕСП имя игроков активировано!",
+            Duration = 6.5,
+            Image = "rewind",
+         })
+        print("Bear [Alpha] GUI: ЕСП имя игроков активировано!")
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+ local Section = Tab:CreateSection("касцена")
+ local Button = Tab:CreateButton({
+    Name = "отключить начальный экран катки",
+    Callback = function()
+        local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local PlayerGui = LocalPlayer:FindFirstChild("PlayerGui")
+
+if not PlayerGui then return end
+
+local function MuteSoundsInGui(gui)
+    for _, sound in ipairs(gui:GetDescendants()) do
+        if sound:IsA("Sound") then
+            sound.Volume = 0
+        end
+    end
+end
+
+local function CheckForCutscene()
+    local cutscene = PlayerGui:FindFirstChild("Cutscene")
+    local cutsceneDeluxe = PlayerGui:FindFirstChild("CutsceneDeluxe")
+    
+    if cutscene then
+        MuteSoundsInGui(cutscene)
+        cutscene.Enabled = false  -- Disable the Cutscene GUI
+    end
+    
+    if cutsceneDeluxe then
+        MuteSoundsInGui(cutsceneDeluxe)
+        cutsceneDeluxe.Enabled = false  -- Disable the CutsceneDeluxe GUI
+    end
+end
+
+-- Initial check
+CheckForCutscene()
+
+-- Listen for new GUI elements being added
+PlayerGui.ChildAdded:Connect(function(child)
+    if child.Name == "Cutscene" or child.Name == "CutsceneDeluxe" then
+        MuteSoundsInGui(child)
+        child.Enabled = false  -- Disable the GUI when added
+    end
+end)
+
+-- Periodically check every 2 seconds
+task.spawn(function()
+    while true do
+        CheckForCutscene()
+        task.wait(2)
+    end
+end)
+
+    end,
+ })
+
+ --Fun Tab End
+ local Tab = Window:CreateTab("музыка", "music")
+ local Section = Tab:CreateSection("основная музыка")
+
+ local Button = Tab:CreateButton({
+    Name = "убрать реверб.",
+    Callback = function()
+        local SoundService = game:GetService("SoundService")
+        SoundService.AmbientReverb = Enum.ReverbType.NoReverb
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "обратно вернуть реверб.",
+    Callback = function()
+        local SoundService = game:GetService("SoundService")
+        SoundService.AmbientReverb = Enum.ReverbType.Hangar
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "замутить музыку [Temporary. Every Round Resets]",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка замучена✔",
+            Duration = 6.5,
+            Image = "volume-off",
+         })
+    end,
+ })
+
+
+ local Slider = Tab:CreateSlider({
+    Name = "громкость",
+    Range = {0, 4},
+    Increment = 0.1,
+    Suffix = "Volume",
+    CurrentValue = 1,
+    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(v)
+        local M = workspace.Music
+        M.Volume = v
+
+    end,
+ })
+
+ local Section = Tab:CreateSection("My favorite songs [This Only Works In Bear and only you can hear these songs.]")
+ local Divider = Tab:CreateDivider()
+ local Section = Tab:CreateSection("Jugsta [Handpicked Favs]")
+
+ local Button = Tab:CreateButton({
+    Name = "telepath - A N T A R A",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://1167890135"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Club Penguin - Music Jam (2009)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://6379410969"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Child Protective Services Theme Song - NDaD",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://5707382732"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jeff Syndicate - Hip Hop",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://27697735"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+ 
+ local Button = Tab:CreateButton({
+    Name = "t e l e p a t h テレパシー能力者 - アンタラ通信",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://6104690359"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jeff Syndicate - Hip Hop",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://27697735"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jugsta - Ouuu",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://15689442874"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jugsta - Cash Up (Prod. Hitsko)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16190758325"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jugsta - Japan",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://14884822465"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jugsta - Lose Yourself",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://14884817551"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jugsta - Runaway",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16662827317"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Jugsta - Batman",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://14884822914"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+ local Section = Tab:CreateSection("Random Brainrot Stuff lmao")
+
+ local Button = Tab:CreateButton({
+    Name = "Bullet - Skibidi fanum tax (Prod. yakside)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16190757458"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "GoofyAhhTate - Rizzlers and Moggers",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://18841888491"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "GoofyAhhTate - PLUH",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16662827543"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "GoofyAhhTate - For The Rizzlers",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://18841891795"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Bullet - FIRE IN THE HOLE",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16662832129"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Bullet - FIRE IN THE HOLE (Cursed Version)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16662835028"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+ local Section = Tab:CreateSection("Goated Songs")
+
+ local Button = Tab:CreateButton({
+    Name = "d3r - Love Bomb",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://18841888868"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "d3r - No Escape",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://18841891575"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "HR - WASSA (Ins)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://17422207260"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Sukoyomi - ◡‿◡ Girlfriend",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://16190781665"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "SAKU - GTA (Nightcore)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://14366981664"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "nMisaki - Russian Angel 2 (In Cosmos)",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://15689447739"
+        M.PlaybackSpeed = 1
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Cheedaman - [BEAR] RUN IT BACK, THE ANNIVERSARY TRACK",
+    Callback = function()
+        local M = workspace.Music
+        M.SoundId = "rbxassetid://13508905498"
+        M.PlaybackSpeed = 1.05
+        M.TimePosition = 0
+        M.Playing = true
+        M.Looped = true
+        
+        
+        Rayfield:Notify({
+            Title = "Bear [Alpha] GUI",
+            Content = "музыка загружена✔",
+            Duration = 6.5,
+            Image = "music",
+         })
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+ local Section = Tab:CreateSection("Bypassed Audios [Coming Soon cuz 99.9% of them are deleted 😭]")
+
+ local Tab = Window:CreateTab("настройки звуков", "music")
+
+local Section = Tab:CreateSection("кастом музик")
+local Label = Tab:CreateLabel("How to use: Go inside your exploit workspace folder and create a folder named 'Music' (Exactly like that or it wont work) and you put your music files here.", "activity")
+   local Label = Tab:CreateLabel("And do not forget to put the full music file name with exetnsion! Example: music.mp3", "file")
+
+    local Button = Tab:CreateButton({
+        Name = "убрать реверб.",
+        Callback = function()
+            local SoundService = game:GetService("SoundService")
+            SoundService.AmbientReverb = Enum.ReverbType.NoReverb
+        end,
+     })
+    
+     local Button = Tab:CreateButton({
+        Name = "вернуть обратно реверб.",
+        Callback = function()
+            local SoundService = game:GetService("SoundService")
+            SoundService.AmbientReverb = Enum.ReverbType.Hangar
+        end,
+     })
+    
+     local Button = Tab:CreateButton({
+        Name = "замутить музыку [Temporary. Every Round Resets]",
+        Callback = function()
+            local M = workspace.Music
+            M.SoundId = "rbxassetid://"
+            M.PlaybackSpeed = 1
+            M.TimePosition = 0
+            M.Playing = true
+            M.Looped = true
+            
+            
+            Rayfield:Notify({
+                Title = "Bear [Alpha] GUI",
+                Content = "музыка замучена✔",
+                Duration = 6.5,
+                Image = "volume-off",
+             })
+        end,
+     })
+    
+    
+     local Slider = Tab:CreateSlider({
+        Name = "громкость",
+        Range = {0, 4},
+        Increment = 0.1,
+        Suffix = "Volume",
+        CurrentValue = 1,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music
+            M.Volume = v
+    
+        end,
+     })
+
+    local Input = Tab:CreateInput({
+           Name = "Enter Song File Name",
+           PlaceholderText = "song.mp3/wav/ogg",
+           RemoveTextAfterFocus = false,
+           Callback = function(text)
+            local musicFolderPath = "Music"
+
+            -- Check if the "Music" folder exists
+            if not isfolder(musicFolderPath) then
+                warn("Folder not found: " .. musicFolderPath)
+                return
+            end
+            
+            local fileName = text -- Get the filename from the TextBox
+            local filePath = musicFolderPath .. "/" .. fileName
+            
+            -- Check if the file exists before playing
+            if isfile(filePath) then
+                sound.SoundId = getcustomasset(filePath) -- Set the SoundId to the custom asset
+                sound.Volume = 1
+                sound.TimePosition = 0
+                sound:Play() -- Play the sound
+                print("Playing: " .. filePath)
+            else
+                warn("File not found: " .. filePath)
+            end
+            
+           end
+       })
+
+       local Section = Tab:CreateSection("настройки музыки") 
+
+       local Input = Tab:CreateInput({
+        Name = "Playback Speed",
+        CurrentValue = "",
+        PlaceholderText = "1",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music
+            M.PlaybackSpeed = Text
+        end,
+     })
+
+       local Slider = Tab:CreateSlider({
+        Name = "проигрывать назад скорость",
+        Range = {0, 12},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 1,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music
+            M.PlaybackSpeed = v
+    
+        end,
+     })
+
+       local Divider = Tab:CreateDivider()
+       local Section = Tab:CreateSection("искажение") 
+
+       local Input = Tab:CreateInput({
+        Name = "искажение",
+        CurrentValue = "",
+        PlaceholderText = "0",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music.DistortionSoundEffect
+            M.Level = Text
+        end,
+     })
+
+       local Slider = Tab:CreateSlider({
+        Name = "искажение",
+        Range = {0, 1},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 0,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music.DistortionSoundEffect
+            M.Level = v
+    
+        end,
+     })
+
+     local Section = Tab:CreateSection("усиление вообщем") 
+
+     local Input = Tab:CreateInput({
+        Name = "высокое усиление",
+        CurrentValue = "",
+        PlaceholderText = "0",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music.EqualizerSoundEffect
+            M.HighGain = Text
+        end,
+     })
+
+     local Slider = Tab:CreateSlider({
+        Name = "высокое усиление",
+        Range = {0, 10},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 0,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music.EqualizerSoundEffect
+            M.HighGain = v
+    
+        end,
+     })
+
+     local Input = Tab:CreateInput({
+        Name = "низкое усиление (басс)",
+        CurrentValue = "",
+        PlaceholderText = "0",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music.EqualizerSoundEffect
+            M.LowGain = Text
+        end,
+     })
+
+     local Slider = Tab:CreateSlider({
+        Name = "низкое усиление (басс)",
+        Range = {0, 10},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 0,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music.EqualizerSoundEffect
+            M.LowGain = v
+    
+        end,
+     })
+
+     local Input = Tab:CreateInput({
+        Name = "среднее усилинение",
+        CurrentValue = "",
+        PlaceholderText = "0",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music.EqualizerSoundEffect
+            M.MidGain = Text
+        end,
+     })
+
+     local Slider = Tab:CreateSlider({
+        Name = "среднее усиление",
+        Range = {0, 10},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 0,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music.EqualizerSoundEffect
+            M.MidGain = v
+    
+        end,
+     })
+
+     local Section = Tab:CreateSection("подача")
+
+     local Input = Tab:CreateInput({
+        Name = "подача",
+        CurrentValue = "",
+        PlaceholderText = "0",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music.PitchShiftSoundEffect
+            M.Octave = Text
+        end,
+     })
+     
+     local Slider = Tab:CreateSlider({
+        Name = "подача",
+        Range = {0, 12},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 1,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music.PitchShiftSoundEffect
+            M.Octave = v
+    
+        end,
+     })
+
+     local Input = Tab:CreateInput({
+        Name = "приоритет",
+        CurrentValue = "",
+        PlaceholderText = "0",
+        RemoveTextAfterFocusLost = false,
+        Flag = "Input1",
+        Callback = function(Text)
+            local M = workspace.Music.PitchShiftSoundEffect
+            M.Priority = Text
+        end,
+     })
+
+     local Slider = Tab:CreateSlider({
+        Name = "приоритет",
+        Range = {0, 5},
+        Increment = 0.01,
+        Suffix = "Amount",
+        CurrentValue = 0,
+        Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+        Callback = function(v)
+            local M = workspace.Music.PitchShiftSoundEffect
+            M.Priority = v
+    
+        end,
+     })
+
+     
+      
+
+       local Section = Tab:CreateSection("визуализация") 
+
+       local Button = Tab:CreateButton({
+        Name = "визуализатор поле зрение",
+        Callback = function()
+
+
+    local Players = game:GetService("Players")
+    local TweenService = game:GetService("TweenService")
+    local RunService = game:GetService("RunService")
+
+    local player = Players.LocalPlayer
+    local camera = workspace.CurrentCamera
+
+-- Reference your sound instance in the workspace.
+    local sound = workspace:WaitForChild("Music")
+
+-- Configuration variables
+local BASE_FOV = 90           -- Default Field of View.
+local MAX_EXTRA_FOV = 120      -- Maximum additional FOV.
+local TWEEN_TIME = 0.1        -- Tween duration.
+local SCALING_FACTOR = 35      -- Factor to scale bass value (adjust as needed).
+
+-- Function to get a value representing bass
+    local function getBassValue()
+    local spectrumData
+    local success = pcall(function()
+        spectrumData = sound:GetSpectrumData()
+    end)
+    
+    if not success or not spectrumData or #spectrumData == 0 then
+        -- Fallback to overall loudness if spectrum data is unavailable.
+        return sound.PlaybackLoudness
+    end
+
+    -- Use the first 20% of bins (bass frequencies)
+    local bassCount = math.max(1, math.floor(#spectrumData * 0.2))
+    local bassSum = 0
+    for i = 1, bassCount do
+        bassSum = bassSum + spectrumData[i]
+    end
+    local averageBass = bassSum / bassCount
+    return averageBass
+end
+
+-- Function to update the camera's FOV based on bass data.
+local function updateCameraFOV()
+    local bassValue = getBassValue()
+    -- Calculate additional FOV based on the bass value.
+    local additionalFOV = math.clamp(bassValue / SCALING_FACTOR, 0, MAX_EXTRA_FOV)
+    local targetFOV = BASE_FOV + additionalFOV
+
+    local tween = TweenService:Create(
+        camera, 
+        TweenInfo.new(TWEEN_TIME, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), 
+        {FieldOfView = targetFOV}
+    )
+    tween:Play()
+end
+
+-- Update every frame.
+RunService.RenderStepped:Connect(function()
+    updateCameraFOV()
+end)
+        end,
+})
+
+
+ local Tab = Window:CreateTab("чат (временно не работает пока что)", "message-circle")
+
+ local Section = Tab:CreateSection("This thingy is for fast typing idk. If u click a button it sends a message on da button")
+local Label = Tab:CreateLabel("I think some messages could get u banned. Im not responsible if u get banned. Also i recommend to use a modern chat anti-ban script", "message-circle-dashed")
+
+ local Button = Tab:CreateButton({
+    Name = "Why target???",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Why target???")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "привет",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Hi")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Bye bye 🤫🧏‍♂️",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Bye bye 🤫🧏‍♂️")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "...",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("...")
+    end,
+ })
+ 
+ local Button = Tab:CreateButton({
+    Name = "GET JUKED!!!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("GET JUKED!!!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "😭🙏",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("😭🙏")
+    end,
+ })
+
+
+ local Button = Tab:CreateButton({
+    Name = "targeter?",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Why target???")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "What did i do to you bro??",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("What did i do to you bro??")
+    end,
+ })
+
+  local Button = Tab:CreateButton({
+    Name = "BRO-",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("BRO-")
+    end,
+ })
+
+    local Button = Tab:CreateButton({
+    Name = "Why teamers bro...",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Why teamers bro...")
+    end,
+ })
+
+    local Button = Tab:CreateButton({
+    Name = "Teamer!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Teamer!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Leave me alone please... 😓😓😥",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Leave me alone please... 😓😓😥")
+    end,
+ })
+
+    local Button = Tab:CreateButton({
+    Name = "Yo bear wanna get freaky together?",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Yo bear wanna get freaky together?")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "STOP CHASING ME!!! CHASE SOMEONE ELSE!!!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("STOP CHASING ME!!! CHASE SOMEONE ELSE!!!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Yo chill... CHILL CHILL CHILL!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Yo chill... CHILL CHILL CHILL!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Bro chill",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Bro chill")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Chill out!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Chill out!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "STOP CHASING ME!!!!!!!!!!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("STOP CHASING ME!!!!!!!!!!")
+    end,
+ })
+
+
+ local Button = Tab:CreateButton({
+    Name = "AHHHHHHHHHHHHHHH!!!!!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("AHHHHHHHHHHHHHHH!!!!!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "STOP!!!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("STOP!!!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Hahaha cant get me!!! 😜",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Hahaha cant get me!!! 😜")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "This bear sucks lol",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("This bear sucks lol")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "The hell is that reach bro",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("The hell is that reach bro")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Have mercy pls",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Have mercy pls")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "No stop 😭🙏",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("No stop 😭🙏")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Wait!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Wait!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Wait... Let me talk.",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Wait... Let me talk.")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "I just wanna say something!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("I just wanna say something!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Let me say something.",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Let me say something.")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Well well well...",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Well well well...")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "NOOB!!!",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("NOOB!!!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "Skibidi Sigma",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("Skibidi Sigma")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "This is like Ohio",
+    Callback = function(Chat)
+	local TextChatService = game:GetService("TextChatService")
+    TextChatService.TextChannels.RBXGeneral:SendAsync("This is like Ohio")
+    end,
+ })
