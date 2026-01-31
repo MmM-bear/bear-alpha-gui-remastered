@@ -153,7 +153,10 @@ local Tab = Window:CreateTab("основное", "menu")
  local Button = Tab:CreateButton({
     Name = "Телепортирование к игроку гуи",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/Teleport-player/refs/heads/main/teleport%20to%20player999"))()
+        loadstring(game:HttpGet("--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://pastebin.com/raw/UuKxpjge"))()"))()
         print("Bear [Alpha] GUI: телепортирование успешно запущено✔")
     end,
  })
