@@ -158,6 +158,30 @@ local Tab = Window:CreateTab("основное", "menu")
     end,
  })
 
+ local Button = Tab:CreateButton({
+    Name = "cframefly (on inventory for one round)",
+    Callback = function()
+        loadstring(game:HttpGet("https://obj.wearedevs.net/199791/scripts/CFrame%20Fly%20Tool%20by%20AGBest.lua"))()
+        print("Bear [Alpha] GUI: cfly успешно запущен!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "тп пазлы",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/hahahahdsidi/refs/heads/main/asdsddsfgfgfgdgddsagahahahaha"))()
+        print("Bear [Alpha] GUI: тп пазлов запущен!")
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "флинг",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/LgZwZ7ZB",true))()
+        print("Bear [Alpha] GUI: флинг на месте запущен!")
+    end,
+ })
+
  local Divider = Tab:CreateDivider()
 
  local Section = Tab:CreateSection("освещение карт")
@@ -412,6 +436,265 @@ end)
 
     end,
  })
+
+local Tab = Window:CreateTab("пазлы (тп)", "menu")
+
+ local Section = Tab:CreateSection("Монохром")
+
+ local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1305.86, 41.97, 611.86)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1193.88, 9.97, 695.59)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл тв кассета",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1273.66, 48.45, 686.47)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл тв телик",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1162.98, 51.97, 563.05)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл сыра",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1040.70, 55.97, 810.87)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл сырного алтаря",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1264.65, 51.97, 964.46)
+    end,
+ })
+
+local Divider = Tab:CreateDivider()
+
+ local Section = Tab:CreateSection("anemoia")
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(339.56, 229.51, 501.83)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(434.62, 282.51, 434.40)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл сыра",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(392.56, 246.51, 499.22)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл сырного алтаря",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(429.34, 304.91, 519.16)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл тв кассета",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(490.44, 286.01, 542.16)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл тв проектора",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(387.90, 282.61, 446.40)
+    end,
+ })
+
+ local Divider = Tab:CreateDivider()
+
+ local Section = Tab:CreateSection("zone 51")
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5.23, 710.01, 2265.74)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(19.55, 741.01, 2472.73)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл сыра",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-142.52, 731.41, 2342.28)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл сырного алтаря",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26.94, 695.00, 2211.60)
+    end,
+ })
+
+local Button = Tab:CreateButton({
+    Name = "пазл цветной код",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-107.53, 728.01, 2358.25)
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "пазл есп цветной код",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(63.15, 708.00, 2374.98)
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "пазл есп цветной код",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(23.85, 761.00, 2512.59)
+    end,
+ })
+
+ local Button = Tab:CreateButton({
+    Name = "пазл есп цветной код",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-75.97, 731.01, 2431.85)
+    end,
+})
+
+local Divider = Tab:CreateDivider()
+
+ local Section = Tab:CreateSection("сырная фабрика")
+
+ local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-168.53, -31.33, 590.67)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4.78, 5.67, 523.16)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл сыра",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(118.94, 7.89, 625.63)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл сырного алтаря",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70.47, 5.77, 408.51)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл есп цветной код",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-156.56, 6.07, 506.77)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл цветной код",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-156.45, 5.66, 812.56)
+    end,
+})
+
+local Divider = Tab:CreateDivider()
+
+ local Section = Tab:CreateSection("understand woods")
+
+ local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(148.54, 73.00, 2751.92)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл с проводами",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-186.74, 47.00, 2853.36)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл сыра",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-97.26, 64.20, 2740.34)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл сырного алтаря",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(203.87, 22.00, 3019.27)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл есп код цветов",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(63.09, 46.00, 2977.07)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл есп код цветов",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(139.05, 89.00, 2699.80)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл есп код цветов",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-152.68, 50.00, 2826.78)
+    end,
+})
+
+local Button = Tab:CreateButton({
+    Name = "пазл код цветов",
+    Callback = function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-66.46, 80.00, 2648.91)
+    end,
+})
+
 
  --Fun Tab End
  local Tab = Window:CreateTab("музыка", "music")
@@ -1224,7 +1507,7 @@ local Label = Tab:CreateLabel("How to use: Go inside your exploit workspace fold
         Range = {0, 12},
         Increment = 0.01,
         Suffix = "Amount",
-        CurrentValue = 1,
+        CurrentValue = 0,
         Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
         Callback = function(v)
             local M = workspace.Music.PitchShiftSoundEffect
@@ -1250,7 +1533,7 @@ local Label = Tab:CreateLabel("How to use: Go inside your exploit workspace fold
         Range = {0, 5},
         Increment = 0.01,
         Suffix = "Amount",
-        CurrentValue = 0,
+        CurrentValue = 1,
         Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
         Callback = function(v)
             local M = workspace.Music.PitchShiftSoundEffect
