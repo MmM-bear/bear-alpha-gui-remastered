@@ -452,7 +452,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/MmM-bear/pidlor/refs/
 local Button = Tab:CreateButton({
  Name = "сделать сырный алтарь",
  Callback = function()
-Callback = function()
  local player = game.Players.LocalPlayer
  local char = player.Character or player.CharacterAdded:Wait()
  local root = char:WaitForChild("HumanoidRootPart")
